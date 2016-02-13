@@ -22,7 +22,7 @@ document.onkeyup = function(e) {
             cells[i].className = '';
             cells[i+1].className = 'active';
             if (score1 === trackLength) {
-            alert("Player one wins!!!");
+            alert("sushi wins!!!");
             location.reload()
             }
             break;
@@ -47,7 +47,7 @@ document.onkeyup = function(e) {
             
 
             if (score2 === trackLength) {
-            alert("Player two wins!!!");
+            alert("taco wins!!!");
             location.reload()
             }
             break;
