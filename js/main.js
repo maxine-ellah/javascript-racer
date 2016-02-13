@@ -13,6 +13,7 @@ document.onkeyup = function(e) {
       var cells = racerTable1.getElementsByTagName('td');
       if (score1 === trackLength) {
       alert("Player one wins!!!");
+      location.reload()
       }
       for (var i=0; i < cells.length; i++) {
           if (cells[i].className.indexOf('active') !== -1) {
@@ -35,6 +36,7 @@ document.onkeyup = function(e) {
       var cells = racerTable2.getElementsByTagName('td');
       if (score2 === trackLength) {
       alert("Player two wins!!!");
+      location.reload()
       }
       for (var i=0; i < cells.length; i++) {
         if (cells[i].className.indexOf('active') !== -1) {
