@@ -1,16 +1,39 @@
-var playerOne = 81;
-var playerTwo = 80;
+var player1 = 81;
+var player2 = 80;
 
-function newGame () {
+var racerTable1 = document.getElementsByClassName('racer_table1')[0];
+var racerTable2 = document.getElementsByClassName('racer_table2')[0];
 
-var move = document.getElementById("player1_strip").getElementsByTagName("td");
-for(var i=0; i<move.length; i++) {
-  move[i].addEventListener('keyup', function(){
-    var move = document.getElementByClassName("active");
-    for(var i=0; i<move.length; i++){
-      move[i].className = "";
-    }
-    this.className = "active";
+document.onkeyup = function(e) {
+  switch (e.keyCode) {
+    case player1:
+      var cells = racerTable1.getElementsByTagName('td');
+      for (var i=0; i < cells.length; i++) {
+        if (cells[i].className.indexOf('active') !== -1) {
+          if (i === (cells.length - 1)) {
+            // do nothing, all the way left
+          } else {
+            cells[i].className = '';
+            cells[i+1].className = 'active';
+            break;
+          }
+        }
+      }
+      break;
+    
+    case player2:
+      var cells = racerTable2.getElementsByTagName('td');
+      for (var i=0; i < cells.length; i++) {
+        if (cells[i].className.indexOf('active') !== -1) {
+          if (i === (cells.length - 1)) {
+            // do nothing, all the way left
+          } else {
+            cells[i].className = '';
+            cells[i+1].className = 'active';
+            break;
+          }
+        }
+      }
+      break;
   }
 }
-
