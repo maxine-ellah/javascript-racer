@@ -4,6 +4,12 @@ td {
   background-color: purple;
 }
 
-td.active {
+.racer_table1 td.active {
   background-color: pink;
+  background-image: url(../icons/riding_sushi.gif);
+}
+
+.racer_table2 td.active {
+  background-color: pink;
+  background-image: url(../icons/good_taco.jpg);
 }
