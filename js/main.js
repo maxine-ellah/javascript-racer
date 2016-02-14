@@ -1,4 +1,3 @@
-//test//
 var player1 = 81;
 var player2 = 80;
 var score1 = 0;
