@@ -13,3 +13,10 @@ td {
   background-color: pink;
   background-image: url(../icons/good_taco.jpg);
 }
+
+.racer_table1 #end {
+  background-image: url(../icons/soy_sauce.png);
+}
+.racer_table2 #end {
+  background-image: url(../icons/jalapeno.gif);
+}
