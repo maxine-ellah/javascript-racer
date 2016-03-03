@@ -21,6 +21,10 @@ td {
   background-image: url(../icons/jalapeno.gif);
 }
 
-.sauce {
+.sauce1 {
   background-color: #00ff5e;
+}
+
+.sauce2 {
+  background-color: #ffac00;
 }

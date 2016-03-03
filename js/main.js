@@ -15,8 +15,11 @@ document.onkeyup = function(e) {
       if (score1 < trackLength) {
             score1 ++;
             console.log(score1)}
-      if (score1 <= 1)
-        cells[snack].className = 'sauce';
+      if (score1 <= 1) {
+        if (snack < 10) {
+            cells[snack].className = 'sauce1';
+            console.log(snack); }
+      }
       for (var i=0; i < cells.length; i++) {
           if (cells[i].className.indexOf('active') !== -1) {
             if (i === (cells.length - 1)) {
@@ -37,10 +40,15 @@ document.onkeyup = function(e) {
     
     case player2:
       var cells = racerTable2.getElementsByTagName('td');
-
+      var snack = Math.floor(Math.random()* 8+1)
       if (score2 < trackLength) {
             score2 ++;
             console.log(score2) }
+      if (score2 <= 1) {
+        if (snack < 10) {
+            cells[snack].className = 'sauce2';
+            console.log(snack); }
+      }
       for (var i=0; i < cells.length; i++) {
         if (cells[i].className.indexOf('active') !== -1) {
           if (i === (cells.length - 1)) {
