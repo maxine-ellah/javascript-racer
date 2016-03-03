@@ -23,8 +23,10 @@ td {
 
 .sauce1 {
   background-color: #00ff5e;
+  background-image: url(../icons/icecream.png);
 }
 
 .sauce2 {
   background-color: #ffac00;
+  background-image: url(../icons/chocolate.png)
 }

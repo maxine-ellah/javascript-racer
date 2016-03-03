@@ -27,6 +27,7 @@ document.onkeyup = function(e) {
           } else {
             cells[i].className = '';
             cells[i+1].className = 'active';
+            
             if (score1 === trackLength) {
             alert("sushi wins!!!");
             location.reload()
@@ -78,3 +79,6 @@ document.onkeyup = function(e) {
 
 //var snack = Math.floor(Math.random()* 8+1);
 //cells[snack].addClass("sauce")
+
+//if cell being iterated over [i] has class 'sauce1' or 'sauce2' 
+//advance the 'active cell' by 2 paces.
