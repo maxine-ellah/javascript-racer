@@ -11,9 +11,12 @@ document.onkeyup = function(e) {
   switch (e.keyCode) {
     case player1:
       var cells = racerTable1.getElementsByTagName('td');
+      var snack = Math.floor(Math.random()* 8+1);
       if (score1 < trackLength) {
             score1 ++;
-            console.log(score1) }
+            console.log(score1)}
+      if (score1 <= 1)
+        cells[snack].className = 'sauce';
       for (var i=0; i < cells.length; i++) {
           if (cells[i].className.indexOf('active') !== -1) {
             if (i === (cells.length - 1)) {
@@ -34,6 +37,7 @@ document.onkeyup = function(e) {
     
     case player2:
       var cells = racerTable2.getElementsByTagName('td');
+
       if (score2 < trackLength) {
             score2 ++;
             console.log(score2) }
@@ -57,3 +61,12 @@ document.onkeyup = function(e) {
       break;
       }
   }
+
+//the first click of either Q or P will also trigger
+//the new var 'snack' to equal a random number between 1 and 10.
+//this number will correspond to a cell on the track and append a 
+//new class to it e.g "snack" and make it active.
+
+
+//var snack = Math.floor(Math.random()* 8+1);
+//cells[snack].addClass("sauce")
