@@ -11,34 +11,49 @@ document.onkeyup = function(e) {
   switch (e.keyCode) {
     case player1:
       var cells = racerTable1.getElementsByTagName('td');
-      var snack = Math.floor(Math.random()* 8+1);
+      var snack = Math.floor(Math.random()* 8+1); //add var equal to a random number between 1-10
       if (score1 < trackLength) {
-            score1 ++;
-            console.log(score1)}
+          score1 ++;
+          console.log(score1)
+      }
       if (score1 <= 1) {
-        if (snack < 10) {
+        if (snack < 10) { //if snack var equals < 10, assign the cell at that number, the class 'sauce1'
             cells[snack].className = 'sauce1';
-            console.log(snack); }
+            console.log(snack); 
+        }
       }
       for (var i=0; i < cells.length; i++) {
           if (cells[i].className.indexOf('active') !== -1) {
+            
+            
             if (i === (cells.length - 1)) {
-            // do nothing, all the way left
-          } else {
+            // do nothing, all the way left          
+
+            } 
+            else {
             cells[i].className = '';
             cells[i+1].className = 'active';
+
             
-            if (score1 === trackLength) {
-            alert("sushi wins!!!");
-            location.reload()
-            }
+              if (score1 === snack){
+                cells[i].className = ''; 
+                cells[i+2].className = 'active';
+                score1 = score1+2;
+              }
+              if (score1 === trackLength) {
+              alert("sushi wins!!!");
+              location.reload()
+              }
+            
+
             break;
           
           }
         }
       }
       break;
-    
+ 
+   
     case player2:
       var cells = racerTable2.getElementsByTagName('td');
       var snack = Math.floor(Math.random()* 8+1)
